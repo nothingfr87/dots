@@ -1,0 +1,77 @@
+@import "./tokyonight.css";
+
+window {
+  background-color: @blk;
+}
+
+* {
+  font-family: JetBrainsMono NF;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#custom-logo {
+  color: @blu;
+  margin: 0 8px;
+  padding: 0 4px;
+}
+
+#network {
+  border-bottom: 2px solid @mag;
+  color: @mag;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
+#workspaces button {
+  margin-left: 2px;
+  padding: 0px 0px;
+  color: #fff;
+  margin-top: 0;
+}
+
+#workspaces button.focused {
+  color: @blu;
+  border-bottom: 2px solid @blu;
+}
+
+#clock {
+  padding: 0 8px;
+  margin-right: 8px;
+  color: @red;
+  border-bottom: 2px solid @red;
+}
+
+#memory {
+  padding: 0 8px;
+  margin-right: 8px;
+  color: @cyn;
+  border-bottom: 2px solid @cyn;
+}
+
+#cpu {
+  padding: 0 8px;
+  margin-right: 8px;
+  color: @ylw;
+  border-bottom: 2px solid @ylw;
+}
+
+#language {
+  border-bottom: 2px solid @grn;
+  color: @grn;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
+#pulseaudio {
+  border-bottom: 2px solid @blu;
+  margin-right: 8px;
+  color: @blu;
+  padding: 0 8px;
+}
+
+#pulseaudio.muted {
+  border-bottom: 2px solid @wht;
+  color: @wht;
+  padding: 0 8px;
+}

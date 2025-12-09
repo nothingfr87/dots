@@ -1,0 +1,36 @@
+{
+    "height": 18, 
+    "modules-left": ["custom/logo", "sway/workspaces"], 
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "memory", "cpu", "sway/language", "network" ,"clock" ],
+    "custom/logo": {
+      "format": "󰣭",
+    },
+    "memory": {
+      "format": "  {used} GiB",
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": false
+    },
+    "network": {
+      "format-ethernet": "  Online",
+      "format-disconnected": "󰖪 Offline",
+    },
+    "clock": {
+        "format": "  {:%I:%M %p}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "sway/language": {
+        "format": "  {short}",
+        "on-click": "swaymsg input 'type:keyboard' xkb_switch_layout next",
+        "on-scroll-up": "swaymsg input 'type:keyboard' xkb_switch_layout next",
+        "on-scroll-down": "swaymsg input 'type:keyboard' xkb_switch_layout prev"
+    },
+}
