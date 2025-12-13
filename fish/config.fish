@@ -1,5 +1,4 @@
 fish_vi_key_bindings
-fastfetch
 set fish_greeting
 
 # Starship

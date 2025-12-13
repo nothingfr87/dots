@@ -2,7 +2,7 @@
     "height": 18, 
     "modules-left": ["custom/logo", "sway/workspaces"], 
     "modules-center": [],
-    "modules-right": ["pulseaudio", "memory", "cpu", "sway/language", "network" ,"clock" ],
+    "modules-right": ["pulseaudio", "memory", "cpu", "network", "sway/language", "clock" ],
     "custom/logo": {
       "format": "󰣭",
     },

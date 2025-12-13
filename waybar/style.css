@@ -6,7 +6,7 @@ window {
 
 * {
   font-family: JetBrainsMono NF;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -19,6 +19,13 @@ window {
 #network {
   border-bottom: 2px solid @mag;
   color: @mag;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
+#network.disconnected {
+  border-bottom: 2px solid @red;
+  color: @red;
   padding: 0 8px;
   margin-right: 8px;
 }
@@ -47,6 +54,13 @@ window {
   margin-right: 8px;
   color: @cyn;
   border-bottom: 2px solid @cyn;
+}
+
+#disk {
+  padding: 0 8px;
+  margin-right: 8px;
+  color: @wht;
+  border-bottom: 2px solid @wht;
 }
 
 #cpu {
