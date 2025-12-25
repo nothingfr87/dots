@@ -6,6 +6,8 @@ starship init fish | source
 
 # PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Prompt
 #function fish_prompt
@@ -26,3 +28,6 @@ alias progcpp="cd ~/My\ Files/Programming/C++\ Projects/"
 alias progc="cd ~/My\ Files/Programming/C\ Projects/"
 alias progco="cd ~/My\ Files/Programming/Courses\ Files/"
 alias progp="cd ~/My\ Files/Programming/Python\ Projects/"
+
+# Pywal
+#wal -e -q -i ~/walls/anime/plants.png

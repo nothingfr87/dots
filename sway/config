@@ -1,12 +1,23 @@
-# Startup
-exec_always swaync
+# Palette
+#0b1020
+#151a33
+#2a3366
+#36408a
+#4a2a3c
+#8e96b5
+#c9d1e6
+#e6e9f5
+
+
+# Font
+font pango:Cascadia Code 10
 
 # Cursor Theme
 seat seat0 xcursor_theme Adwaita 24
 
 # Gaps
-gaps inner 4
-gaps outer 4
+gaps inner 1
+gaps outer 1
 
 # Focus follow mouse and wraps
 focus_follows_mouse yes
@@ -28,12 +39,12 @@ set $down j
 set $up k
 set $right l
 set $term foot
-set $menu dmenu_run -nb '#1a1b26' -sb '#bb9af7' -fn 'JetBrainsMono NF:size=10' -h 26 -p 'Run: '
+set $menu dmenu_run -nb '#0b1020' -nf '#8e96b5' -sb '#2a3366' -sf '#e6e9f5' -fn 'Cascadia Code:size=11' -p 'Run: '
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
-output * bg ~/walls/tokyonight/moon.jpeg fill 
+output * bg ~/walls/Random/TheMidnightGiantFile.png fill 
 #
 ### Key bindings
     # Start a terminal
@@ -44,12 +55,12 @@ output * bg ~/walls/tokyonight/moon.jpeg fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+Shift+f exec ~/.config/sway/scripts/dmenu-flatpak.sh 
+    bindsym $mod+e exec thunar
 
     floating_modifier $mod normal
 
     # Screenshot
-    bindsym Print exec grimshot savecopy anything screenshot-%Y-%m-%d.png
+    bindsym Print exec grimshot savecopy anything screenshot$(date+%Y-%m-%d).png
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -119,7 +130,7 @@ output * bg ~/walls/tokyonight/moon.jpeg fill
     # Switch the current container between different layout styles
     bindsym $mod+space layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+t layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -173,13 +184,23 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-  swaybar_command waybar
-}
 
-client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
-client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
+
+bar {
+    position top
+
+    status_command while date +"%-I:%M %p | %A, %d %B %Y"; do sleep 1; done
+
+    colors {
+        background #0b1020
+        statusline #c9d1e6
+        separator  #0b1020
+
+        focused_workspace  #0b1020 #2a3366 #e6e9f5
+        active_workspace   #0b1020 #151a33 #c9d1e6
+        inactive_workspace #0b1020 #0b1020 #8e96b5
+        urgent_workspace   #0b1020 #4a2a3c #ffd7e3
+    }
+}
 
 include /etc/sway/config.d/*
