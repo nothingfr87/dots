@@ -29,7 +29,7 @@ gaps outer 6px
 
 include /etc/sway/config-vars.d/*
 
-output * bg ~/walls/Catppuccin2/flowers-13.jpg fill
+output * bg ~/walls/Catppuccin/asian-village.png fill
 
 ### Key bindings
 #
@@ -179,20 +179,21 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 bar {
-    position top
-    status_command while date +'%I:%M %p | %A, %d %B %Y'; do sleep 1; done
-
-    colors {
-        background #1e1e2e
-        statusline #cdd6f4
-        separator  #6c7086
-
-        focused_workspace  #cba6f7 #cba6f7 #11111b
-        active_workspace   #313244 #313244 #cdd6f4
-        inactive_workspace #1e1e2e #1e1e2e #6c7086
-        urgent_workspace   #f38ba8 #f38ba8 #1e1e2e
-        binding_mode       #f9e2af #f9e2af #1e1e2e
-    }
+    swaybar_command waybar
+    # position top
+    # status_command while date +'%I:%M %p | %A, %d %B %Y'; do sleep 1; done
+    #
+    # colors {
+    #     background #1e1e2e
+    #     statusline #cdd6f4
+    #     separator  #6c7086
+    #
+    #     focused_workspace  #cba6f7 #cba6f7 #11111b
+    #     active_workspace   #313244 #313244 #cdd6f4
+    #     inactive_workspace #1e1e2e #1e1e2e #6c7086
+    #     urgent_workspace   #f38ba8 #f38ba8 #1e1e2e
+    #     binding_mode       #f9e2af #f9e2af #1e1e2e
+    # }
 }
 
 default_border none

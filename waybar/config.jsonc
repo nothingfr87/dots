@@ -1,0 +1,66 @@
+{
+    "height": 30,
+    "modules-left": [
+        "sway/workspaces",
+    ],
+    "modules-center": [
+        "custom/media"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "sway/language",
+        "clock",
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "default": ""
+        }
+     },
+    "clock": {
+        "timezone": "Africa/Cairo",
+        "format":"󰥔 {:%I:%M %p}",
+        "format-alt": "{:%A, %d %B %Y}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "network": {
+        "format-ethernet": "  Connected",
+        "format-disconnected": "Disconnected ⚠",
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%", 
+        "format-muted": "Muted ",
+        "format-icons": {
+            "default": ["", "", ""],
+            "muted": "",
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "/home/nothing/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+    },
+    "sway/language": {
+      "format": "  {short}"
+    }
+}
