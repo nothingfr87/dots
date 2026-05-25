@@ -13,6 +13,7 @@
         "memory",
         "sway/language",
         "clock",
+        "custom/power"
     ],
     "sway/workspaces": {
         "disable-scroll": true,
@@ -37,17 +38,19 @@
     },
     "network": {
         "format-ethernet": "  Connected",
+        "format-wifi": "{icon} ({signalStrength}%)",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "format-disconnected": "Disconnected ⚠",
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume}%", 
-        "format-muted": "Muted ",
+        "format": "{icon}  {volume}%", 
+        "format-muted": "  Muted",
         "format-icons": {
             "default": ["", "", ""],
             "muted": "",
         },
-        "on-click": "pavucontrol"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -58,9 +61,14 @@
             "default": "🎜"
         },
         "escape": true,
+        "on-click": "playerctl play-pause",
         "exec": "/home/nothing/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
     },
     "sway/language": {
       "format": "  {short}"
+    },
+    "custom/power": {
+      "format": "⏻",
+      "on-click": "systemctl poweroff",
     }
 }

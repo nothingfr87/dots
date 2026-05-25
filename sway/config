@@ -9,13 +9,13 @@ set $up k
 set $right l
 set $term foot
 set $menu wmenu-run \
--N "#1e1e2e" \
--n "#cdd6f4" \
--S "#cba6f7" \
--s "#11111b" \
--M "#313244" \
--m "#cdd6f4" \
--f "JetBrainsMono Nerd Font Bold 12" 
+-N "$crust" \
+-n "$text" \
+-S "$mauve" \
+-s "$base" \
+-M "$surface0" \
+-m "$text" \
+-f "JetBrainsMono Nerd Font Bold 11" 
 
 font pango:JetBrainsMono NF Bold 10
 
@@ -29,7 +29,7 @@ gaps outer 6px
 
 include /etc/sway/config-vars.d/*
 
-output * bg ~/walls/Catppuccin/asian-village.png fill
+output * bg ~/walls/Catppuccin/flowers-13.jpg fill
 
 ### Key bindings
 #
@@ -184,19 +184,27 @@ bar {
     # status_command while date +'%I:%M %p | %A, %d %B %Y'; do sleep 1; done
     #
     # colors {
-    #     background #1e1e2e
-    #     statusline #cdd6f4
-    #     separator  #6c7086
+    #     background $crust 
+    #     statusline $text 
+    #     separator  $overlay0 
     #
-    #     focused_workspace  #cba6f7 #cba6f7 #11111b
-    #     active_workspace   #313244 #313244 #cdd6f4
-    #     inactive_workspace #1e1e2e #1e1e2e #6c7086
-    #     urgent_workspace   #f38ba8 #f38ba8 #1e1e2e
-    #     binding_mode       #f9e2af #f9e2af #1e1e2e
+    #     focused_workspace  $mauve $mauve $crust
+    #     active_workspace   $surface0 $surface0 $text 
+    #     inactive_workspace $base $base $overlay0 
+    #     urgent_workspace   $red $red $crust 
+    #     binding_mode       $yellow $yellow $crust 
     # }
 }
 
-default_border none
-default_floating_border none
+# target                 title     bg    text   indicator  border
+client.focused           $mauve    $base $text  $pink      $mauve
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+default_border pixel 3
+default_floating_border pixel 3
 
 include /etc/sway/config.d/*
