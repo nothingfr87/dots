@@ -18,6 +18,8 @@ set $menu wmenu-run \
 -f "JetBrainsMono Nerd Font Bold 11" 
 
 font pango:JetBrainsMono NF Bold 10
+seat seat0 xcursor_theme 'Qogir-cursors' 24
+
 
 input "type:keyboard" {
     xkb_layout "us,ara"
