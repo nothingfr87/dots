@@ -8,7 +8,11 @@ My Sway Dots
 
 ### Bar:
 
-- SwayBar
+- SwayBar (First Config)
+- Waybar (Second Config)
+- Noctalia Bar (Third Config)
+
+**You can switch between the 3 bars through the config file**
 
 ### Terminal:
 
@@ -16,7 +20,14 @@ My Sway Dots
 
 ### Shell:
 
-- Fish
+- Fish with TMUX
+
+### Launcher:
+
+- Wmenu (First Config)
+- Vicinae (Third Config)
+
+**You can also switch between them through the config file**
 
 ### Screenshot Utility:
 
@@ -27,6 +38,7 @@ My Sway Dots
 ### Font:
 
 - [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip)
+- IBM Plex Sans Arabic (For Arabic Text)
 
 ---
 
@@ -39,13 +51,28 @@ the config files have configs for:
 - fastfetch
 - foot
 - fish
+- TMUX
+- waybar
+- noctal
+- TMUX
+- waybar
+- noctalia-shell
+- vicinaeia-shell
+- vicinae
 
 ---
 
 ## I want to see it.
 
+### With Swaybar:
 ![Preview](screenshot.png)
 ![Preview](screenshot2.png)
+
+### With Waybar:
+![Preview](screenshot-waybar.png)
+
+### With Noctalia:
+![Preview](screenshot-noctalia.png)
 
 ---
 
@@ -53,18 +80,6 @@ the config files have configs for:
 
 Just copy the file to `~/.config/`
 
-But....
-
-Remember to change the path of the wallpaper to your desired wallpaper
-
 ```bash
-cp -r sway foot fish ~/.config/
+cp -r path/to/repo/* ~/.config/
 ```
-
-That's it
-
----
-
-## What about the NeoVim config?
-
-I will create a separated repo for NeoVim

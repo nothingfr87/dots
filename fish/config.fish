@@ -7,10 +7,15 @@ set -g theme_powerline_fonts no
 set -g theme_color_scheme catppuccin-mocha
 
 # Autoload TMUX
-if status is-interactive
-    and not set -q TMUX
-    tmux attach-session -t default; or tmux new-session -s default
-end
+ if status is-interactive
+    if type -q tmux
+        if not set -q TMUX
+            if not set -q SSH_TTY
+                tmux attach -t main 2>/dev/null; or tmux new -s main
+            end
+        end
+    end
+ end
 
 # PATH
 export PATH="/usr/local/node/bin:/home/nothing/.local/bin:$PATH"
