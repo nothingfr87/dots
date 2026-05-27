@@ -10,7 +10,6 @@ My Sway Dots
 
 - SwayBar (First Config)
 - Waybar (Second Config)
-- Noctalia Bar (Third Config)
 
 **You can switch between the 3 bars through the config file**
 
@@ -53,11 +52,8 @@ the config files have configs for:
 - fish
 - TMUX
 - waybar
-- noctal
 - TMUX
 - waybar
-- noctalia-shell
-- vicinaeia-shell
 - vicinae
 
 ---
@@ -70,9 +66,6 @@ the config files have configs for:
 
 ### With Waybar:
 ![Preview](screenshot-waybar.png)
-
-### With Noctalia:
-![Preview](screenshot-noctalia.png)
 
 ---
 
