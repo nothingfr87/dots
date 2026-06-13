@@ -1,0 +1,42 @@
+function fish_greeting
+end
+
+set fish_key_bindings fish_vi_key_bindings
+set -g theme_nerd_fonts yes
+set -g theme_powerline_fonts yes
+set -g theme_color_scheme catppuccin-mocha 
+
+# # Autoload TMUX
+#  if status is-interactive
+#     if type -q tmux
+#         if not set -q TMUX
+#             if not set -q SSH_TTY
+#                 tmux attach -t main 2>/dev/null; or tmux new -s main
+#             end
+#         end
+#     end
+#  end
+
+# PATH
+export PATH="/usr/local/node/bin:/home/nothing/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+
+# Aliases
+alias ff "fastfetch -c examples/13.jsonc --disable-linewrap"
+alias vim "nvim"
+alias cdnv "cd ~/.config/nvim"
+alias cat "batcat"
+
+# Prompt
+# function fish_prompt
+#           set_color green
+#           printf "%s" (whoami)
+#
+#           set_color normal
+#           printf " in "
+#
+#           set_color blue
+#           printf "%s" (prompt_pwd)
+#
+#           set_color normal
+#           printf "%s \$ "
+# end

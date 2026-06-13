@@ -1,6 +1,6 @@
-# Sway Dots
+# Dots
 
-My Sway Dots
+My Dots
 
 ---
 
@@ -13,9 +13,12 @@ My Sway Dots
 
 **You can switch between the 3 bars through the config file**
 
+- i3bar & i3status (i3)
+
 ### Terminal:
 
 - Foot
+- alacritty (i3)
 
 ### Shell:
 
@@ -28,11 +31,15 @@ My Sway Dots
 
 **You can also switch between them through the config file**
 
+- Dmenu (i3)
+
 ### Screenshot Utility:
 
 - Grim
 - Slurp
 - Grimshot
+
+- Flameshot (i3)
 
 ### Font:
 
@@ -55,17 +62,10 @@ the config files have configs for:
 - TMUX
 - waybar
 - vicinae
+- i3
+- i3status
 
 ---
-
-## I want to see it.
-
-### With Swaybar:
-![Preview](screenshot.png)
-![Preview](screenshot2.png)
-
-### With Waybar:
-![Preview](screenshot-waybar.png)
 
 ---
 
@@ -74,5 +74,9 @@ the config files have configs for:
 Just copy the file to `~/.config/`
 
 ```bash
-cp -r path/to/repo/* ~/.config/
+# Sway
+cp -r path/to/repo/sway-files/* ~/.config/
+
+# i3
+cp -r path/to/repo/i3-files/* ~/.config/
 ```

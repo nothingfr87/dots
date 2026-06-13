@@ -1,7 +1,6 @@
 include catppuccin
 
-exec qs -c noctalia-shell
-exec vicinae server
+# exec vicinae server
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -20,7 +19,7 @@ set $menu wmenu-run \
 -m "$text" \
 -f "JetBrainsMono Nerd Font Bold 11" 
 
-set $menu vicinae toggle 
+# set $menu vicinae toggle 
 
 font pango:JetBrainsMono NF Bold 10
 seat seat0 xcursor_theme 'Qogir-cursors' 24
@@ -187,7 +186,7 @@ bindsym $mod+r mode "resize"
 
 
 bar {
-    # swaybar_command waybar
+    swaybar_command waybar
     # position top
     # status_command while date +'%I:%M %p | %A, %d %B %Y'; do sleep 1; done
     #
