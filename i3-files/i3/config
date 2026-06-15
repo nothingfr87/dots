@@ -53,6 +53,9 @@ gaps outer 6
 exec_always --no-startup-id feh --bg-fill ~/walls/Catppuccin/flowers-13.jpg
 exec --no-startup-id picom
 
+exec "setxkbmap -layout us,ara"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
 floating_modifier $mod
 tiling_drag modifier titlebar
 
