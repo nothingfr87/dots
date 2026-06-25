@@ -1,0 +1,89 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "IBM Plex Sans Arabic";
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: rgba(30, 30, 46, 0.92);
+  border: 1px solid rgba(69, 71, 90, 0.8);
+  border-radius: 16px;
+  color: #cdd6f4;
+}
+
+#outer-box {
+  margin: 10px;
+  padding: 0;
+  background: transparent;
+}
+
+#input {
+  background-color: rgba(49, 50, 68, 0.78);
+  border: 1px solid rgba(69, 71, 90, 0.85);
+  border-radius: 11px;
+  color: #cdd6f4;
+  margin: 0 0 10px 0;
+  padding: 10px 12px;
+}
+
+#input:focus {
+  border-color: rgba(203, 166, 247, 0.8);
+  box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.16);
+}
+
+#input image {
+  color: #cba6f7;
+  margin-right: 8px;
+}
+
+#scroll {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+#inner-box {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+#entry {
+  background: transparent;
+  border-radius: 11px;
+  color: #bac2de;
+  margin: 2px 0;
+  padding: 9px 10px;
+  transition: color 160ms ease;
+}
+
+#entry:hover {
+  background: transparent;
+  color: #cdd6f4;
+}
+
+#entry:selected {
+  background-color: rgba(69, 71, 90, 0.78);
+  color: #cba6f7;
+}
+
+#entry:selected #text {
+  background-color: transparent;
+  color: #cba6f7;
+}
+
+#entry:selected #img {
+  background-color: transparent;
+}
+
+#text {
+  color: inherit;
+  margin-left: 10px;
+}
+
+#img {
+  margin-right: 4px;
+}

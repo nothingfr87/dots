@@ -8,38 +8,23 @@ My Dots
 
 ### Bar:
 
-- SwayBar (First Config)
-- Waybar (Second Config)
-
-**You can switch between the 3 bars through the config file**
-
-- i3bar & i3status (i3)
+- Waybar 
 
 ### Terminal:
 
 - Foot
-- alacritty (i3)
 
 ### Shell:
 
-- Fish with TMUX
+- Fish
 
 ### Launcher:
 
-- Wmenu (First Config)
-- Vicinae (Third Config)
-
-**You can also switch between them through the config file**
-
-- Dmenu (i3)
+- Wofi
 
 ### Screenshot Utility:
 
-- Grim
-- Slurp
-- Grimshot
-
-- Flameshot (i3)
+- Niri Built-In
 
 ### Font:
 
@@ -52,20 +37,11 @@ My Dots
 
 the config files have configs for:
 
-- sway 
-- swaybar
+- niri 
 - fastfetch
 - foot
 - fish
-- TMUX
 - waybar
-- TMUX
-- waybar
-- vicinae
-- i3
-- i3status
-
----
 
 ---
 
@@ -74,9 +50,5 @@ the config files have configs for:
 Just copy the file to `~/.config/`
 
 ```bash
-# Sway
-cp -r path/to/repo/sway-files/* ~/.config/
-
-# i3
-cp -r path/to/repo/i3-files/* ~/.config/
+cp -r path/to/repo/* ~/.config/
 ```
