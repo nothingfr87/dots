@@ -1,5 +1,4 @@
 spawn-sh-at-startup "swaybg -m fill -i ~/walls/Catppuccin/basement.jpg"
-spawn-sh-at-startup "vicinae server"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -32,8 +31,8 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        off 
-        width 1
+        on 
+        width 2
         active-color "#cba6f7"
         inactive-color "#585b70"
     }
@@ -46,13 +45,6 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 window-rule {
     geometry-corner-radius 13
     clip-to-geometry true
-}
-
-window-rule {
-  match app-id="^foot$"
-  background-effect {
-    blur true
-  }
 }
 
 layer-rule {
