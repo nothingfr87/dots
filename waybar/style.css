@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font", "IBM Plex Sans Arabic";
+  font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
   font-size: 11px;
   font-weight: bold;
   min-height: 0;
@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-  background: transparent;
+  background: alpha(@crust, 0.7);
   color: @text;
 }
 
@@ -23,11 +23,8 @@ window#waybar {
 #language,
 #clock,
 #custom-power {
-  background: alpha(@base, 0.62);
-  border: 1px solid alpha(@surface1, 0.65);
   border-radius: 12px;
-  margin: 3px 3px;
-  padding: 6px 11px;
+  padding: 6px;
 }
 
 #workspaces {
@@ -38,79 +35,67 @@ window#waybar {
 #workspaces button {
   color: @overlay1;
   background: transparent;
-  border-radius: 9px;
   margin: 2px;
-  padding: 3px 8px;
+  border-radius: 0;
+  padding: 3px 4px;
   transition: all 180ms ease;
 }
 
 #workspaces button:hover {
-  background: alpha(@surface1, 0.75);
   color: @text;
 }
 
 #workspaces button.focused {
-  background: alpha(@mauve, 0.22);
   color: @mauve;
+  border-bottom: 2px solid @mauve;
 }
 
 #workspaces button.urgent {
-  background: alpha(@red, 0.2);
-  color: @red;
+  color: @text;
 }
 
 #custom-media {
-  color: @mauve;
+  color: @text;
   min-width: 120px;
   margin-left: 10px;
 }
 
 #cpu {
-  color: @yellow;
+  color: @text;
 }
 
 #memory {
-  color: @green;
+  color: @text;
 }
 
 #network {
-  color: @peach;
+  color: @text;
 }
 
 #network.disconnected {
-  background: alpha(@red, 0.16);
-  border-color: alpha(@red, 0.4);
-  color: @red;
+  color: @text;
 }
 
 #pulseaudio {
-  color: @blue;
+  color: @text;
 }
 
 #pulseaudio.muted {
-  background: alpha(@surface0, 0.6);
   color: @overlay0;
 }
 
 #language {
-  color: @maroon;
+  color: @text;
   min-width: 38px;
 }
 
 #clock {
-  color: @lavender;
+  color: @text;
   margin-right: 8px;
 }
 
-#custom-power {
-  background: alpha(@red, 0.15);
-  border-color: alpha(@red, 0.38);
-  color: @red;
+#custom-run {
+  color: @text;
   margin-right: 8px;
   min-width: 18px;
-}
-
-#custom-power:hover {
-  background: alpha(@red, 0.28);
-  color: @text;
 }

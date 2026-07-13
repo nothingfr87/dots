@@ -17,6 +17,11 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+    xcursor-theme "WhiteSur-cursors"
+    xcursor-size 36
+}
+
 output "VGA-1" {
     transform "normal"
 }

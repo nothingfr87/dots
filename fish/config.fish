@@ -17,16 +17,20 @@ set -g theme_color_scheme catppuccin-mocha
 #     end
 # end
 
-# PATH
+# VARS
 export PATH="/usr/local/node/bin:/home/nothing/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+export EDITOR="nvim"
 source "$HOME/.cargo/env.fish"
 
 # Aliases
-alias ff "fastfetch -c examples/13.jsonc --disable-linewrap"
+alias ff "fastfetch --disable-linewrap"
+alias v nvim
 alias vim nvim
 alias cdnv "cd ~/.config/nvim"
 alias cat batcat
+alias bat batcat
 alias ls "eza --icons"
+alias tree "eza --tree --icons"
 alias cleanapt "sudo apt autopurge; sudo apt autoclean; sudo apt autoremove"
 alias update "sudo apt update; sudo apt upgrade"
 alias install "sudo apt update; sudo apt install"
