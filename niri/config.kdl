@@ -1,4 +1,5 @@
-spawn-sh-at-startup "swaybg -m fill -i ~/walls/Catppuccin/basement.jpg"
+spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
+spawn-at-startup "waybar"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -18,12 +19,13 @@ input {
 }
 
 cursor {
-    xcursor-theme "WhiteSur-cursors"
+    xcursor-theme "ArcDusk-cursors"
     xcursor-size 36
 }
 
 output "VGA-1" {
-    transform "normal"
+  mode custom=true "1280x1024@60.00"
+  transform "normal"
 }
 
 layout {
@@ -45,10 +47,10 @@ layout {
 }
 
 prefer-no-csd
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Niri/screenshot-%Y-%S.png"
 
 window-rule {
-    geometry-corner-radius 13
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 

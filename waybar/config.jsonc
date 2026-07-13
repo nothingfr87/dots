@@ -1,24 +1,8 @@
 {
-  "height": 30,
+  "width": 1024,
   "modules-left": ["niri/workspaces"],
-
-  "modules-center": [],
-
-  "modules-right": [
-    "pulseaudio",
-    "custom/separator",
-    "niri/language",
-    "custom/separator",
-    "network",
-    "custom/separator",
-    "clock",
-  ],
-
-  "custom/separator": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false,
-  },
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "niri/language", "network"],
 
   "niri/workspaces": {
     "disable-scroll": true,
@@ -29,17 +13,9 @@
 
   "clock": {
     "timezone": "Africa/Cairo",
-    "format": "{:%I:%M %p}",
+    "format": "󰥔  {:%I:%M %p}",
+    "format-alt": "  {:%d/%m/%Y}",
   },
-
-  //"cpu": {
-  //  "format": "  {usage}%",
-  //  "tooltip": false
-  //},
-
-  //"memory": {
-  //  "format": "  {}%"
-  //},
 
   "network": {
     "format-ethernet": "  Connected",
@@ -59,25 +35,7 @@
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
-  //"custom/media": {
-  //  "format": "{icon} {text}",
-  //  "return-type": "json",
-  //  "max-length": 40,
-  //  "format-icons": {
-  //    "spotify": "",
-  //    "default": "🎜"
-  //  },
-  //  "escape": true,
-  //  "on-click": "playerctl play-pause",
-  //  "exec": "/home/nothing/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null"
-  //},
-
   "niri/language": {
     "format": "  {short}",
   },
-
-  //"custom/run": {
-  //  "format": " 󰍜 Menu",
-  //  "on-click": "wofi --show drun"
-  //}
 }

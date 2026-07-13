@@ -7,6 +7,5 @@ allow_images=true
 image_size=28
 term=foot
 insensitive=true
-matching=fuzzy
 hide_scroll=true
 no_actions=true

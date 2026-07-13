@@ -1,82 +1,111 @@
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
 * {
   font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
+
   border: none;
+  border-radius: 0;
   outline: none;
   box-shadow: none;
 }
 
 window {
-  background-color: rgba(30, 30, 46, 0.92);
-  border: 1px solid rgba(69, 71, 90, 0.8);
-  border-radius: 16px;
-  color: #cdd6f4;
+  background: @crust;
+  color: @text;
+
+  border: 2px solid @mauve;
 }
 
 #outer-box {
   margin: 10px;
   padding: 0;
-  background: transparent;
-}
-
-#input {
-  background-color: rgba(49, 50, 68, 0.78);
-  border: 1px solid rgba(69, 71, 90, 0.85);
-  border-radius: 11px;
-  color: #cdd6f4;
-  margin: 0 0 10px 0;
-  padding: 10px 12px;
-}
-
-#input:focus {
-  border-color: rgba(203, 166, 247, 0.8);
-  box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.16);
-}
-
-#input image {
-  color: #cba6f7;
-  margin-right: 8px;
 }
 
 #scroll {
-  background: transparent;
   margin: 0;
   padding: 0;
 }
 
 #inner-box {
-  background: transparent;
-  margin: 0;
-  padding: 0;
+  spacing: 4px;
 }
+
+/* Search box */
+
+#input {
+  background: @base;
+  color: @mauve;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+#input,
+#input *,
+#input image,
+#input text {
+  color: @mauve;
+}
+
+#input:focus {
+  background: @lavender;
+  color: @crust;
+}
+
+#input:focus * {
+  color: @crust;
+}
+
+/* Entries */
 
 #entry {
   background: transparent;
-  border-radius: 11px;
-  color: #bac2de;
+  color: @subtext1;
+
+  padding: 10px 12px;
   margin: 2px 0;
-  padding: 9px 10px;
-  transition: color 160ms ease;
+
+  transition: all 180ms ease;
 }
 
 #entry:hover {
-  background: transparent;
-  color: #cdd6f4;
+  background: @surface1;
+  color: @text;
 }
 
 #entry:selected {
-  background-color: rgba(69, 71, 90, 0.78);
-  color: #cba6f7;
+  background: @teal;
+  color: @crust;
 }
 
-#entry:selected #text {
-  background-color: transparent;
-  color: #cba6f7;
-}
-
-#entry:selected #img {
-  background-color: transparent;
+#entry:selected * {
+  color: @crust;
 }
 
 #text {
@@ -85,5 +114,5 @@ window {
 }
 
 #img {
-  margin-right: 4px;
+  margin-right: 6px;
 }
