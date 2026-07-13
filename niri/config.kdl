@@ -1,5 +1,4 @@
 spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
-spawn-at-startup "waybar"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -19,7 +18,7 @@ input {
 }
 
 cursor {
-    xcursor-theme "ArcDusk-cursors"
+    xcursor-theme "Bibata-Modern-Classic"
     xcursor-size 36
 }
 
