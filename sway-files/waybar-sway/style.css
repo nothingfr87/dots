@@ -1,0 +1,130 @@
+@import "mocha.css";
+
+* {
+  font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
+  font-size: 14px;
+  font-weight: 700;
+
+  min-height: 0;
+
+  border: none;
+  box-shadow: none;
+}
+
+window#waybar {
+  background: transparent;
+  color: @text;
+}
+
+window#waybar > box {
+  background: linear-gradient(135deg, @bar-bg, @bar-bg2);
+  border-radius: 18px;
+}
+
+#workspaces,
+#custom-distro,
+#network,
+#pulseaudio,
+#language,
+#clock {
+  margin: 10px 5px;
+  padding: 1px 22px;
+  border-radius: 999px;
+  color: @text;
+  background: linear-gradient(135deg, @module-bg1, @module-bg2);
+  transition: all 180ms ease;
+}
+
+#modules-left > widget:first-child {
+  margin-left: 15px;
+}
+
+#modules-left > widget:last-child {
+  margin-right: 15px;
+}
+
+#modules-right > widget:first-child {
+  margin-left: 15px;
+}
+
+#modules-right > widget:last-child {
+  margin-right: 15px;
+}
+
+#workspaces {
+  margin-left: 10px;
+  padding: 0 6px;
+
+  border: 1px solid @mauve;
+}
+
+#workspaces button {
+  margin: 3px;
+  padding: 1px 9px;
+
+  border-radius: 999px;
+
+  color: @subtext1;
+  background: transparent;
+
+  transition: all 180ms ease;
+}
+
+#workspaces button:hover {
+  background: @surface2;
+  color: @text;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+  padding: 1px 22px;
+
+  color: @crust;
+  background: linear-gradient(135deg, @mauve, @pink);
+
+  box-shadow: 0 0 10px alpha(@pink, 0.5);
+}
+
+#workspaces button.urgent {
+  background: @red;
+  color: @crust;
+}
+
+#custom-distro {
+  font-size: 22px;
+  font-weight: 900;
+  color: @crust;
+  background: linear-gradient(135deg, @red, @maroon);
+}
+
+#network {
+  color: @crust;
+  background: linear-gradient(135deg, @sky, @sapphire);
+}
+
+#network.disconnected {
+  color: @crust;
+  background: @red;
+}
+
+#pulseaudio {
+  color: @crust;
+  background: linear-gradient(135deg, @blue, @lavender);
+}
+
+#pulseaudio.muted {
+  color: @overlay2;
+  background: @surface2;
+}
+
+#language {
+  min-width: 42px;
+
+  color: @crust;
+  background: linear-gradient(135deg, @yellow, @peach);
+}
+
+#clock {
+  color: @crust;
+  background: linear-gradient(135deg, @mauve, @pink);
+}

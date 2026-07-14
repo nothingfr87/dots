@@ -18,14 +18,10 @@ window#waybar {
 
 #workspaces,
 #clock,
-#cpu,
-#memory,
 #network,
 #pulseaudio,
 #language,
-#custom-media,
-#custom-run,
-#custom-power {
+#custom-distro {
   border-radius: 4px;
   color: @crust;
   margin: 8px 5px;
@@ -33,9 +29,24 @@ window#waybar {
   transition: all 180ms ease;
 }
 
+#modules-left > widget:first-child {
+  margin-left: 15px;
+}
+
+#modules-left > widget:last-child {
+  margin-right: 15px;
+}
+
+#modules-right > widget:first-child {
+  margin-left: 15px;
+}
+
+#modules-right > widget:last-child {
+  margin-right: 15px;
+}
+
 #workspaces {
   padding: 2px 6px;
-  margin-left: 10px;
 }
 
 #workspaces button {
@@ -83,9 +94,15 @@ window#waybar {
 
 #network {
   background: @sky;
-  margin-right: 15px;
 }
 
 #network.disconnected {
   background: @red;
+}
+
+#custom-distro {
+  font-size: 22px;
+  font-weight: 900;
+  color: @crust;
+  background: linear-gradient(135deg, @red, @maroon);
 }

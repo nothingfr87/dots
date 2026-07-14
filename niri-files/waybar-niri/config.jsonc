@@ -1,10 +1,23 @@
 {
   "width": 1024,
-  "modules-left": ["niri/workspaces"],
+  "modules-left": ["sway/workspaces", "niri/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "niri/language", "network"],
+  "modules-right": [
+    "pulseaudio",
+    "sway/language",
+    "niri/language",
+    "network",
+    "custom/distro",
+  ],
 
   "niri/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{}",
+  },
+
+  "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
@@ -24,6 +37,12 @@
     "format-disconnected": "⚠ Disconnected",
   },
 
+  "custom/distro": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip": false,
+  },
+
   "pulseaudio": {
     "scroll-step": 5,
     "format": "{icon}  {volume}%",
@@ -36,6 +55,9 @@
   },
 
   "niri/language": {
+    "format": "  {short}",
+  },
+  "sway/language": {
     "format": "  {short}",
   },
 }

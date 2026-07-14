@@ -1,4 +1,5 @@
 spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
+spawn-sh-at-startup "waybar -c ~/.config/waybar-niri/config.jsonc ~/.config/waybar-niri/style.css"
 
 debug {
   honor-xdg-activation-with-invalid-serial

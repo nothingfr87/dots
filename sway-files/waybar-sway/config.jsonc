@@ -1,0 +1,56 @@
+{
+  "width": 768,
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+
+  "modules-left": ["custom/distro", "network", "pulseaudio"],
+  "modules-center": ["sway/workspaces"],
+  "modules-right": ["sway/language", "clock"],
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  "custom/distro": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip": false,
+  },
+
+  "network": {
+    "format-ethernet": "  Connected",
+    "format-wifi": "{icon} ({signalStrength}%)",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon}  {volume}%",
+    "format-muted": "  Muted",
+    "format-icons": {
+      "default": ["", "", ""],
+      "muted": "",
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+
+  "sway/language": {
+    "format": "  {short}",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "timezone": "Africa/Cairo",
+    "format": "󰥔  {:%I:%M %p}",
+    "format-alt": "  {:%d/%m/%Y}",
+    "tooltip": false,
+  },
+}
