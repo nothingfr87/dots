@@ -17,37 +17,29 @@ window#waybar {
 }
 
 window#waybar > box {
-  background: linear-gradient(135deg, @bar-bg, @bar-bg2);
-  border-radius: 18px;
+  background: #11111b;
+  border-radius: 9px;
 }
 
 #workspaces,
 #custom-distro,
+#custom-media,
 #network,
 #pulseaudio,
 #language,
 #clock {
   margin: 10px 5px;
   padding: 1px 22px;
-  border-radius: 999px;
+  border-radius: 6px;
   color: @text;
-  background: linear-gradient(135deg, @module-bg1, @module-bg2);
   transition: all 180ms ease;
 }
 
-#modules-left > widget:first-child {
+.modules-left {
   margin-left: 15px;
 }
 
-#modules-left > widget:last-child {
-  margin-right: 15px;
-}
-
-#modules-right > widget:first-child {
-  margin-left: 15px;
-}
-
-#modules-right > widget:last-child {
+.modules-right {
   margin-right: 15px;
 }
 
@@ -62,7 +54,7 @@ window#waybar > box {
   margin: 3px;
   padding: 1px 9px;
 
-  border-radius: 999px;
+  border-radius: 3px;
 
   color: @subtext1;
   background: transparent;
@@ -71,7 +63,7 @@ window#waybar > box {
 }
 
 #workspaces button:hover {
-  background: @surface2;
+  background: @base;
   color: @text;
 }
 
@@ -81,8 +73,6 @@ window#waybar > box {
 
   color: @crust;
   background: linear-gradient(135deg, @mauve, @pink);
-
-  box-shadow: 0 0 10px alpha(@pink, 0.5);
 }
 
 #workspaces button.urgent {
@@ -90,41 +80,41 @@ window#waybar > box {
   color: @crust;
 }
 
-#custom-distro {
-  font-size: 22px;
-  font-weight: 900;
+#clock {
   color: @crust;
   background: linear-gradient(135deg, @red, @maroon);
 }
 
-#network {
+#custom-media {
   color: @crust;
-  background: linear-gradient(135deg, @sky, @sapphire);
+  background: linear-gradient(135deg, @flamingo, @rosewater);
+}
+
+#custom-distro {
+  font-size: 20px;
+  font-weight: 900;
+  color: @red;
+}
+
+#network {
+  color: @sky;
 }
 
 #network.disconnected {
-  color: @crust;
-  background: @red;
+  color: @red;
 }
 
 #pulseaudio {
-  color: @crust;
-  background: linear-gradient(135deg, @blue, @lavender);
+  color: @blue;
 }
 
 #pulseaudio.muted {
   color: @overlay2;
-  background: @surface2;
 }
 
-#language {
-  min-width: 42px;
-
-  color: @crust;
-  background: linear-gradient(135deg, @yellow, @peach);
-}
-
-#clock {
-  color: @crust;
-  background: linear-gradient(135deg, @mauve, @pink);
+#custom-distro,
+#network,
+#pulseaudio {
+  margin: 0;
+  padding: 0 15px;
 }

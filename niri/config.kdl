@@ -1,5 +1,5 @@
 spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
-spawn-sh-at-startup "waybar -c ~/.config/waybar-niri/config.jsonc ~/.config/waybar-niri/style.css"
+spawn-at-startup "waybar"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -50,7 +50,7 @@ prefer-no-csd
 screenshot-path "~/Pictures/Niri/screenshot-%Y-%S.png"
 
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 12
     clip-to-geometry true
 }
 
