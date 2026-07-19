@@ -4,26 +4,16 @@
   font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
   font-size: 14px;
   font-weight: 700;
-
-  min-height: 0;
-
   border: none;
   box-shadow: none;
 }
 
 window#waybar {
-  background: transparent;
-  color: @text;
-}
-
-window#waybar > box {
-  background: #11111b;
-  border-radius: 9px;
+  background: @crust;
 }
 
 #workspaces,
-#custom-distro,
-#custom-media,
+#custom-power,
 #network,
 #pulseaudio,
 #language,
@@ -31,6 +21,20 @@ window#waybar > box {
   margin: 10px 5px;
   padding: 1px 22px;
   border-radius: 6px;
+  color: @text;
+  transition: all 180ms ease;
+}
+
+#clock,
+#custom-power,
+#network,
+#pulseaudio,
+#language {
+  background: @base;
+  margin: 8px 4px;
+  padding: 0 18px;
+  min-height: 32px;
+  border-radius: 999px;
   color: @text;
   transition: all 180ms ease;
 }
@@ -45,34 +49,27 @@ window#waybar > box {
 
 #workspaces {
   margin-left: 10px;
-  padding: 0 6px;
-
-  border: 1px solid @mauve;
 }
 
 #workspaces button {
   margin: 3px;
-  padding: 1px 9px;
-
-  border-radius: 3px;
-
-  color: @subtext1;
-  background: transparent;
-
+  padding: 0 0px;
+  min-height: 0;
+  border-radius: 12px;
+  background: @surface0;
   transition: all 180ms ease;
 }
 
 #workspaces button:hover {
-  background: @base;
-  color: @text;
+  background: @pink;
+  color: @crust;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  padding: 1px 22px;
-
+  padding: 0 14px;
   color: @crust;
-  background: linear-gradient(135deg, @mauve, @pink);
+  background: @mauve;
 }
 
 #workspaces button.urgent {
@@ -81,18 +78,10 @@ window#waybar > box {
 }
 
 #clock {
-  color: @crust;
-  background: linear-gradient(135deg, @red, @maroon);
+  color: @lavender;
 }
 
-#custom-media {
-  color: @crust;
-  background: linear-gradient(135deg, @flamingo, @rosewater);
-}
-
-#custom-distro {
-  font-size: 20px;
-  font-weight: 900;
+#custom-power {
   color: @red;
 }
 
@@ -112,9 +101,22 @@ window#waybar > box {
   color: @overlay2;
 }
 
-#custom-distro,
+#clock,
 #network,
-#pulseaudio {
-  margin: 0;
-  padding: 0 15px;
+#pulseaudio,
+#custom-power {
+  background: @mantle;
+  min-height: 28px;
+  min-width: 0;
+  margin: 8px 3px;
+  padding: 0 14px;
+  border-radius: 999px;
+  transition: all 180ms ease;
+}
+
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover {
+  background: @base;
 }

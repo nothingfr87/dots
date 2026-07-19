@@ -24,9 +24,3 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
-
-/* Custom */
-@define-color bar-bg alpha(@crust, 0.97);
-@define-color bar-bg2 alpha(@base, 0.95);
-@define-color module-bg1 @surface0;
-@define-color module-bg2 @surface1;

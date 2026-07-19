@@ -1,5 +1,4 @@
 spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
-spawn-at-startup "waybar"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -11,6 +10,8 @@ input {
             layout "us,ara"
             options "grp:alt_shift_toggle,compose:ralt,ctrl:nocaps"
         }
+        repeat-delay 250 
+        repeat-rate 35
         numlock
         track-layout "window"
     }
@@ -19,7 +20,7 @@ input {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 36
 }
 
@@ -44,6 +45,10 @@ layout {
         inactive-color "#585b70"
     }
     background-color "transparent"
+}
+
+hotkey-overlay {
+  skip-at-startup
 }
 
 prefer-no-csd
@@ -71,6 +76,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: Foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: Wofi" { spawn-sh "wofi --show drun"; }
+    Mod+E hotkey-overlay-title="Run Nemo" { spawn "nemo"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

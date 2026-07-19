@@ -41,6 +41,7 @@ window {
   color: @text;
 
   border: 2px solid @mauve;
+  border-radius: 12px;
 }
 
 #outer-box {
@@ -57,7 +58,6 @@ window {
   spacing: 4px;
 }
 
-/* Search box */
 
 #input {
   background: @base;
@@ -82,7 +82,6 @@ window {
   color: @crust;
 }
 
-/* Entries */
 
 #entry {
   background: transparent;
