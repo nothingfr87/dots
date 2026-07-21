@@ -1,0 +1,21 @@
+[global]
+font = Iosevka Nerd Font ExtraBold 11
+corner_radius = 4
+frame_width = 2
+frame_color = "#ebbcba"
+background = "#191724"
+separator_color= frame
+highlight = "#ebbcba"
+
+[urgency_low]
+background = "#191724"
+foreground = "#e0def4"
+
+[urgency_normal]
+background = "#191724"
+foreground = "#e0def4"
+
+[urgency_critical]
+background = "#191724"
+foreground = "#e0def4"
+frame_color = "#eb6f92"

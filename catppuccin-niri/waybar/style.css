@@ -1,0 +1,118 @@
+@import "mocha.css";
+
+* {
+  font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+}
+
+window#waybar {
+  background: @crust;
+}
+
+#workspaces,
+#custom-power,
+#network,
+#pulseaudio,
+#language,
+#clock {
+  background: @base;
+  margin: 10px 5px;
+  padding: 1px 22px;
+  border-radius: 999px;
+  color: @text;
+  transition: all 180ms ease;
+}
+
+#clock,
+#custom-power,
+#network,
+#pulseaudio,
+#language {
+  padding: 0 18px;
+  min-height: 32px;
+}
+
+.modules-left {
+  margin-left: 15px;
+}
+
+.modules-right {
+  margin-right: 15px;
+}
+
+#workspaces {
+  margin-left: 10px;
+}
+
+#workspaces button {
+  margin: 3px;
+  padding: 0 0px;
+  min-height: 0;
+  border-radius: 12px;
+  background: @surface0;
+  transition: all 180ms ease;
+}
+
+#workspaces button:hover {
+  background: @pink;
+  color: @crust;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+  padding: 0 14px;
+  color: @crust;
+  background: @mauve;
+}
+
+#workspaces button.urgent {
+  background: @red;
+  color: @crust;
+}
+
+#clock {
+  color: @lavender;
+}
+
+#custom-power {
+  color: @red;
+}
+
+#network {
+  color: @sky;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#pulseaudio {
+  color: @blue;
+}
+
+#pulseaudio.muted {
+  color: @overlay2;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#custom-power {
+  background: @mantle;
+  min-height: 28px;
+  min-width: 0;
+  margin: 8px 3px;
+  padding: 0 14px;
+  border-radius: 999px;
+  transition: all 180ms ease;
+}
+
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover {
+  background: @base;
+}
