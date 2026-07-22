@@ -22,7 +22,7 @@ set -g theme_newline_prompt (set_color cdd6f4)"❯ "(set_color normal)
 # end
 
 # VARS
-export PATH="/usr/local/node/bin:/home/nothing/.local/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+export PATH="/usr/local/node/bin:/home/nothing/.local/bin:/usr/local/go/bin:$HOME/go/bin:/usr/sbin:$PATH"
 export EDITOR="nvim"
 source "$HOME/.cargo/env.fish"
 

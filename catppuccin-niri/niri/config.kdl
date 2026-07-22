@@ -1,4 +1,4 @@
-spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/snow-night-moon.png"
+spawn-sh-at-startup "swaybg -m fill -i ~/walls/Cartoon/cave-sunset-view.png"
 
 debug {
   honor-xdg-activation-with-invalid-serial
@@ -30,7 +30,7 @@ output "VGA-1" {
 }
 
 layout {
-    gaps 6 
+    gaps 8 
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
