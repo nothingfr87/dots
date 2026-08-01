@@ -1,0 +1,60 @@
+{
+  "modules-left": ["custom/distro", "niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "niri/language",
+    "network",
+    "pulseaudio",
+    "custom/power",
+  ],
+
+  "niri/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "systemctl poweroff",
+    "tooltip": false,
+  },
+
+  "custom/distro": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "network": {
+    "format-ethernet": "",
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-disconnected": "⚠",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""],
+      "muted": "",
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "timezone": "Africa/Cairo",
+    "format": "{:%d %b %I:%M %p}",
+    "tooltip": false,
+  },
+
+  "niri/language": {
+    "format": "{short}",
+  },
+}
