@@ -45,7 +45,7 @@ window#waybar {
   margin: 0 3px;
   padding: 0 0px;
   min-height: 0;
-  border-radius: 12px;
+  border-radius: 0;
   color: @muted;
   transition: all 180ms ease;
 }
@@ -76,7 +76,7 @@ window#waybar {
   min-width: 0;
   margin: 0 3px;
   padding: 0 14px;
-  border-radius: 999px;
+  border-radius: 0;
   transition: all 180ms ease;
 }
 
@@ -85,12 +85,10 @@ window#waybar {
   color: @color1;
   background: @color3;
   margin-right: 0;
-  margin-left: 8px;
   min-width: 20px;
-  border-radius: 999px 0 0 999px;
+  border-radius: 0;
 }
 
 #custom-distro {
-  border-radius: 0 999px 999px 0;
   margin-left: 0;
 }

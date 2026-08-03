@@ -11,7 +11,7 @@ input {
     keyboard {
         xkb {
             layout "us,ara"
-            options "grp:alt_shift_toggle,compose:ralt,ctrl:nocaps"
+            options "grp:alt_shift_toggle,compose:ralt,caps:escape"
         }
         repeat-delay 250 
         repeat-rate 35
@@ -33,7 +33,7 @@ output "VGA-1" {
 }
 
 layout {
-    gaps 4
+    gaps 0 
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -51,7 +51,7 @@ hotkey-overlay {
 prefer-no-csd
 screenshot-path "~/Pictures/Niri/screenshot-%Y-%M-%S.png"
 
-window-rule {
+/-window-rule {
     geometry-corner-radius 4 
     clip-to-geometry true
 }

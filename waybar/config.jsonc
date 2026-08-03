@@ -1,5 +1,5 @@
 {
-  "modules-left": ["custom/distro", "niri/workspaces"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",

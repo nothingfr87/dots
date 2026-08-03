@@ -1,7 +1,7 @@
 [global]
 font = Iosevka Nerd Font ExtraBold 11
-corner_radius = 4 
-frame_width = 2
+corner_radius = 0 
+frame_width = 1
 frame_color = "#cba6f7"
 separator_color= frame
 highlight = "#cba6f7"
