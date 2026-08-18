@@ -58,7 +58,6 @@ window#waybar {
 
 #mpris {
   color: @rosewater;
-  background: @base;
 }
 
 #clock {

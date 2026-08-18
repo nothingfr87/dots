@@ -4,6 +4,8 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: Foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: Fuzzel" { spawn "fuzzel"; }
     Mod+S hotkey-overlay-title="Search Files" { spawn "~/.config/niri/scripts/fzl-explore.sh"; }
+    Mod+Shift+S hotkey-overlay-title="Switch Themes" { spawn "~/.config/niri/scripts/fzl-theme.sh"; }
+    Mod+Shift+W hotkey-overlay-title="Switch Wallpapers" { spawn "~/.config/niri/scripts/fzl-wallpaper.sh"; }
     Mod+E hotkey-overlay-title="Run File Manager" { spawn "thunar"; }
 
     Mod+Shift+C {spawn-sh "killall waybar && waybar";}
