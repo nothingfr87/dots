@@ -1,7 +1,7 @@
-@import "mocha.css";
+@import "colors/mocha.css";
 
 * {
-  font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
+  font-family: "JetBrainsMono Nerd Font", "IBM Plex Sans Arabic";
   font-size: 14px;
   font-weight: 900;
   border: none;
@@ -9,86 +9,82 @@
 }
 
 window#waybar {
-  background: @color0;
+  background: @crust;
 }
 
 #workspaces,
-#custom-power,
-#custom-distro,
 #network,
+#cpu,
+#memory,
 #pulseaudio,
+#mpris,
 #language,
-#tray,
 #clock {
-  margin: 0 5px;
-  padding: 1px 22px;
+  margin: 0 3px;
+  padding: 5px 14px;
+  min-height: 28px;
+  min-width: 0;
   color: @text;
   transition: all 180ms ease;
 }
 
-#clock,
-#custom-power,
-#custom-distro,
-#network,
-#pulseaudio,
-#tray,
-#language {
-  padding: 0 18px;
-  min-height: 32px;
+.modules-left {
+  margin-left: 15px;
 }
 
-#workspaces {
-  margin-left: 10px;
+.modules-right {
+  margin-right: 15px;
 }
 
 #workspaces button {
-  margin: 0 3px;
-  padding: 0 0px;
+  padding: 0;
   min-height: 0;
-  border-radius: 0;
-  color: @muted;
+  color: @subtext0;
   transition: all 180ms ease;
 }
 
 #workspaces button:hover {
-  color: @gold;
+  color: @yellow;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  color: @color3;
+  color: @mauve;
 }
 
 #workspaces button.urgent {
-  color: @color2;
+  color: @red;
+}
+
+#mpris {
+  color: @rosewater;
+  background: @base;
+}
+
+#clock {
+  color: @lavender;
+}
+
+#cpu {
+  color: @sapphire;
+}
+
+#memory {
+  color: @pink;
+}
+
+#pulseaudio {
+  color: @blue;
 }
 
 #pulseaudio.muted {
-  color: @muted;
+  color: @subtext0;
 }
 
-#clock,
-#network,
-#pulseaudio,
-#custom-power,
-#custom-distro {
-  min-height: 28px;
-  min-width: 0;
-  margin: 0 3px;
-  padding: 0 14px;
-  border-radius: 0;
-  transition: all 180ms ease;
+#network {
+  color: @sky;
 }
 
-#custom-power,
-#custom-distro {
-  color: @color1;
-  background: @color3;
-  margin-right: 0;
-  min-width: 20px;
-  border-radius: 0;
-}
-
-#custom-distro {
-  margin-left: 0;
+#language {
+  color: @flamingo;
 }

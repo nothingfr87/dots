@@ -1,32 +1,28 @@
 function fish_greeting
 end
 
-# set fish_key_bindings fish_vi_key_bindings
-
-# Bobthefish
 set -g theme_nerd_fonts yes
 set -g theme_powerline_fonts yes
-set -g theme_color_scheme catppuccin-mocha
 set -g theme_newline_cursor yes
 set -g theme_newline_prompt (set_color cdd6f4)"❯ "(set_color normal)
 
-# Autoload TMUX
-# if status is-interactive
-#     if type -q tmux
-#         if not set -q TMUX
-#             if not set -q SSH_TTY
-#                 tmux attach -t main 2>/dev/null; or tmux new -s main
-#             end
-#         end
-#     end
-# end
+set -Ux FZF_DEFAULT_OPTS "\
+--prompt='󰄛   ' \
+--info='inline-right' \
+--separator='' \
+--border='sharp' \
+--scrollbar='┃' \
+--layout='reverse' \
+--color='bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8' \
+--color='fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc' \
+--color='marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8' \
+--color='selected-bg:#45475A' \
+--color='border:#cba6f7,scrollbar:#cba6f7'"
 
-# VARS
 export PATH="/usr/local/node/bin:/home/nothing/.local/bin:/usr/local/go/bin:$HOME/go/bin:/usr/sbin:$PATH"
 export EDITOR="nvim"
 source "$HOME/.cargo/env.fish"
 
-# Aliases
 alias ff "fastfetch --disable-linewrap"
 alias vim nvim
 alias v nvim
@@ -40,7 +36,6 @@ alias update "sudo apt update; sudo apt upgrade"
 alias install "sudo apt update; sudo apt install"
 alias rswaybar "killall waybar; waybar & disown"
 
-# Prompt
 set -g __show_cmd_duration 0
 
 function __mark_command_finished --on-event fish_postexec

@@ -1,0 +1,19 @@
+spawn-sh-at-startup "swaybg -m fill -i ~/walls/Catppuccin/cat_at_play.png"
+spawn-at-startup "mako"
+spawn-at-startup "waybar"
+spawn-at-startup "xwayland-satellite"
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Niri/screenshot-%Y-%M-%S.png"
+
+blur {
+  passes 1
+}

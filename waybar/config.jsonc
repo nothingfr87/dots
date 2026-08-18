@@ -1,13 +1,7 @@
 {
-  "modules-left": ["niri/workspaces"],
+  "modules-left": ["niri/workspaces", "mpris"],
   "modules-center": ["clock"],
-  "modules-right": [
-    "tray",
-    "niri/language",
-    "network",
-    "pulseaudio",
-    "custom/power",
-  ],
+  "modules-right": ["niri/language", "cpu", "memory", "network", "pulseaudio"],
 
   "niri/workspaces": {
     "disable-scroll": true,
@@ -17,28 +11,55 @@
     "tooltip": false,
   },
 
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "systemctl poweroff",
+  "mpris": {
+    "format": "󰝚  {artist} — {title}",
+    "format-paused": "󰏤  {artist} — {title}",
+    "format-stopped": "󰝛  No media",
+    "max-length": 30,
+    "tooltip-format": "{player}: {artist} — {album} — {title}",
     "tooltip": false,
   },
 
-  "custom/distro": {
-    "format": "",
+  "clock": {
+    "timezone": "Africa/Cairo",
+    "format": "  {:%d %b, 󰥔  %I:%M %p}",
     "tooltip": false,
+  },
+
+  "niri/language": {
+    "format": "  {short}",
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}%",
+    "states": {
+      "good": 50,
+      "warning": 80,
+      "critical": 100,
+    },
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": "  {percentage}%",
+    "states": {
+      "warning": 50,
+      "critical": 80,
+    },
   },
 
   "network": {
-    "format-ethernet": "",
-    "format-wifi": "{icon}",
+    "format-ethernet": "  Online",
+    "format-wifi": "{icon}  Wi-Fi",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-disconnected": "⚠",
+    "format-disconnected": "⚠ Offline",
     "tooltip": false,
   },
 
   "pulseaudio": {
     "scroll-step": 5,
-    "format": "{icon}",
+    "format": "{icon}  {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", ""],
@@ -46,15 +67,5 @@
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false,
-  },
-
-  "clock": {
-    "timezone": "Africa/Cairo",
-    "format": "{:%d %b %I:%M %p}",
-    "tooltip": false,
-  },
-
-  "niri/language": {
-    "format": "{short}",
   },
 }

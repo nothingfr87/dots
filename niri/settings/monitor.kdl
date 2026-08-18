@@ -1,0 +1,4 @@
+output "VGA-1" {
+  mode custom=true "1280x1024@60.00"
+  transform "normal"
+}

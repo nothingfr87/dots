@@ -1,0 +1,19 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ara"
+            options "grp:alt_shift_toggle,compose:ralt,caps:escape"
+        }
+        repeat-delay 250 
+        repeat-rate 35
+        numlock
+        track-layout "window"
+    }
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+cursor {
+    xcursor-theme "Bibata-Original-Classic"
+    xcursor-size 34
+}
