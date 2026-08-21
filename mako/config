@@ -1,4 +1,4 @@
-include=~/.config/mako/colors/mocha
+include=/home/nothing/.cache/wal/colors-mako
 
 padding=10
 font=JetBrainsMono Nerd Font Bold 10

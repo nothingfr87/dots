@@ -82,10 +82,10 @@ end
 
 function fish_prompt
     set -l last_status $status
-    set -l cwd_color cba6f7
-    set -l git_color a6adc8
-    set -l time_color f9e2af
-    set -l prompt_color cdd6f4
+    set -l cwd_color purple
+    set -l git_color brblack
+    set -l time_color yellow
+    set -l prompt_color white
     set -l duration
 
     if test $__show_cmd_duration -eq 1; and set -q CMD_DURATION; and test $CMD_DURATION -ge 100

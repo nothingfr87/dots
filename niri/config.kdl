@@ -1,8 +1,7 @@
-include "colors/mocha.kdl"
-include "settings/layout.kdl"
+include "/home/nothing/.cache/wal/colors-niri.kdl" // THEME
 include "settings/binds.kdl"
-include "settings/monitor.kdl"
 include "settings/input.kdl"
+include "settings/layout.kdl"
+include "settings/monitor.kdl"
 include "settings/other.kdl"
 include "settings/window-rules.kdl"
-

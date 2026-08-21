@@ -16,7 +16,10 @@ while true; do
         fuzzel --dmenu --prompt "Set Wallpaper ❯ "
     )
 
-    [[ -z "$selection" ]] && exit 0
+    if [[ -z "$selection" ]]; then
+        notify-send "Cancelled" "Wallpaper selection has been cancelled."
+        exit 0
+    fi
 
     if [[ "$selection" == ".." ]]; then
         wal_dir=$(dirname "$wal_dir")
@@ -34,6 +37,30 @@ while true; do
     if [[ -f "$path" ]]; then
         pkill swaybg 2>/dev/null
         swaybg -m fill -i "$path" &
+
+        notify-send "Wallpaper Changed" "Wallpaper has been changed successfully."
+
+        pywal=$(
+            printf "Yes\nNo" |
+            fuzzel --dmenu --prompt "Reload Pywal? ❯ "
+        )
+
+        case "$pywal" in
+            Yes)
+                if wal -i "$path"; then
+                    notify-send "Pywal Reloaded" "Colors have been updated successfully."
+                else
+                    notify-send "Pywal Error" "Failed to reload Pywal."
+                fi
+                ;;
+            No)
+                notify-send "Pywal Skipped" "Pywal was not reloaded."
+                ;;
+            "")
+                notify-send "Pywal Cancelled" "Pywal reload was cancelled."
+                ;;
+        esac
+
         exit 0
     fi
 done

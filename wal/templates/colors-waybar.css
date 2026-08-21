@@ -1,0 +1,30 @@
+@define-color rosewater {color15};
+@define-color flamingo  {color14};
+@define-color pink      {color13};
+@define-color mauve     {color13};
+@define-color red       {color9};
+@define-color maroon    {color9};
+@define-color peach     {color11};
+@define-color yellow    {color14};
+@define-color green     {color10};
+@define-color teal      {color14};
+@define-color sky       {color12};
+@define-color sapphire  {color12};
+@define-color blue      {color12};
+@define-color lavender  {color13};
+
+@define-color text      {foreground};
+@define-color subtext1  {color7};
+@define-color subtext0  {color8};
+
+@define-color overlay2  {color8};
+@define-color overlay1  {color8};
+@define-color overlay0  {color8};
+
+@define-color surface2  {color8};
+@define-color surface1  {color0};
+@define-color surface0  {color0};
+
+@define-color base      {background};
+@define-color mantle    {background};
+@define-color crust     {background};
