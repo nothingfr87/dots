@@ -1,6 +1,6 @@
-include=/home/nothing/.cache/wal/colors-mako
+include=~/.config/mako/colors/mocha
 
 padding=10
-font=JetBrainsMono Nerd Font Bold 10
+font=Iosevka Nerd Font Bold 10
 default-timeout=3000
 ignore-timeout=1

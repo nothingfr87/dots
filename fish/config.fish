@@ -24,6 +24,7 @@ export EDITOR="nvim"
 source "$HOME/.cargo/env.fish"
 
 alias ff "fastfetch --disable-linewrap"
+alias nf "nerdfetch"
 alias vim nvim
 alias v nvim
 alias cdnv "cd ~/.config/nvim"

@@ -56,6 +56,8 @@ case "$sure" in
         sed -i "s|^include = .*\.ini$|$fuzzel_import|" \
             ~/.config/fuzzel/fuzzel.ini
 
+        swaybg -m -fill -i "$wallpaper" & 
+
         makoctl reload &
         killall waybar 2>/dev/null
         waybar &

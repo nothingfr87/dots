@@ -1,4 +1,4 @@
-include "/home/nothing/.cache/wal/colors-niri.kdl" // THEME
+include "colors/mocha.kdl" // THEME
 include "settings/binds.kdl"
 include "settings/input.kdl"
 include "settings/layout.kdl"

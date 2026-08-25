@@ -1,4 +1,4 @@
-spawn-sh-at-startup "swaybg -m fill -i ~/walls/Catppuccin/cat_at_play.png"
+spawn-sh-at-startup "swaybg -m fill -i ~/walls/Catppuccin/pompeii.png"
 spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"

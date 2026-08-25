@@ -1,8 +1,8 @@
-@import "/home/nothing/.cache/wal/colors-waybar.css";
+@import "colors/mocha.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font", "IBM Plex Sans Arabic";
-  font-size: 14px;
+  font-family: "Iosevka Nerd Font", "IBM Plex Sans Arabic";
+  font-size: 16px;
   font-weight: 900;
   border: none;
   box-shadow: none;

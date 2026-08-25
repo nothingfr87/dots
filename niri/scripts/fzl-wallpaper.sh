@@ -47,7 +47,7 @@ while true; do
 
         case "$pywal" in
             Yes)
-                if wal -i "$path"; then
+                if wal -i "$path" --backend haishuko; then
                     notify-send "Pywal Reloaded" "Colors have been updated successfully."
                 else
                     notify-send "Pywal Error" "Failed to reload Pywal."

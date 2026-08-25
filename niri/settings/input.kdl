@@ -9,7 +9,6 @@ input {
         numlock
         track-layout "window"
     }
-    warp-mouse-to-focus
     focus-follows-mouse max-scroll-amount="0%"
 }
 
