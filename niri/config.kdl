@@ -1,4 +1,4 @@
-include "colors/mocha.kdl" // THEME
+include "colors/mocha.kdl"
 include "settings/binds.kdl"
 include "settings/input.kdl"
 include "settings/layout.kdl"

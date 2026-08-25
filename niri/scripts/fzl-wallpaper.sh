@@ -39,28 +39,6 @@ while true; do
         swaybg -m fill -i "$path" &
 
         notify-send "Wallpaper Changed" "Wallpaper has been changed successfully."
-
-        pywal=$(
-            printf "Yes\nNo" |
-            fuzzel --dmenu --prompt "Reload Pywal? ❯ "
-        )
-
-        case "$pywal" in
-            Yes)
-                if wal -i "$path" --backend haishuko; then
-                    notify-send "Pywal Reloaded" "Colors have been updated successfully."
-                else
-                    notify-send "Pywal Error" "Failed to reload Pywal."
-                fi
-                ;;
-            No)
-                notify-send "Pywal Skipped" "Pywal was not reloaded."
-                ;;
-            "")
-                notify-send "Pywal Cancelled" "Pywal reload was cancelled."
-                ;;
-        esac
-
         exit 0
     fi
 done
