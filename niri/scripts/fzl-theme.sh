@@ -3,6 +3,7 @@
 theme=$(printf '%s\n' \
     "Catppuccin Mocha" \
     "Rose Pine" \
+    "Tokyonight" \
     "Pywal" |
     fuzzel --dmenu --prompt "Choose theme ❯ " --lines=5 --width=20)
 
@@ -21,6 +22,14 @@ case "$theme" in
         niri_import='include "colors/rose-pine.kdl" // THEME'
         mako_import='include=~/.config/mako/colors/rose-pine'
         fuzzel_import='include = ~/.config/fuzzel/colors/rose-pine.ini'
+        ;;
+
+    "Tokyonight")
+        waybar_import='@import "colors/tokyonight.css";'
+        foot_import='include=~/.config/foot/colors/tokyonight.ini'
+        niri_import='include "colors/tokyonight.kdl" // THEME'
+        mako_import='include=~/.config/mako/colors/tokyonight'
+        fuzzel_import='include = ~/.config/fuzzel/colors/tokyonight.ini'
         ;;
 
     "Pywal")

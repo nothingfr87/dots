@@ -61,7 +61,7 @@ window#waybar {
 }
 
 #clock {
-  color: @lavender;
+  color: @teal;
 }
 
 #cpu {
